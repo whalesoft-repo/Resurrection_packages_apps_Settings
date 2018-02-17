@@ -73,6 +73,7 @@ public class Settings extends SettingsActivity {
     public static class StorageUseActivity extends SettingsActivity { /* empty */ }
     public static class DevelopmentSettingsActivity extends SettingsActivity { /* empty */ }
     public static class ThemesActivity extends SettingsActivity { /* empty */ }
+    public static class PerfomanceActivity extends SettingsActivity { /* empty */ }
     public static class AccessibilitySettingsActivity extends SettingsActivity { /* empty */ }
     public static class CaptioningSettingsActivity extends SettingsActivity { /* empty */ }
     public static class AccessibilityInversionSettingsActivity extends SettingsActivity { /* empty */ }
@@ -159,14 +160,14 @@ public class Settings extends SettingsActivity {
     public static class TestingSettingsActivity extends SettingsActivity { /* empty */ }
     public static class WifiAPITestActivity extends SettingsActivity { /* empty */ }
     public static class WifiInfoActivity extends SettingsActivity { /* empty */ }
-	public static class MainSettingsActivity extends SettingsActivity { /* empty */ }
-	public static class KActivity extends SettingsActivity { /* empty */ }
-	public static class MainSettingsLayoutActivity extends SettingsActivity { /* empty */ }
+    public static class MainSettingsActivity extends SettingsActivity { /* empty */ }
+    public static class KActivity extends SettingsActivity { /* empty */ }
+    public static class MainSettingsLayoutActivity extends SettingsActivity { /* empty */ }
 
     // Categories.
     public static class WirelessSettings extends SettingsActivity { /* empty */ }
-	public static class MainSettings extends SettingsActivity { /* empty */ }
-	public static class MainSettingsLayout extends SettingsActivity { /* empty */ }
+    public static class MainSettings extends SettingsActivity { /* empty */ }
+    public static class MainSettingsLayout extends SettingsActivity { /* empty */ }
     public static class DeviceSettings extends SettingsActivity { /* empty */ }
     public static class PersonalSettings extends SettingsActivity { /* empty */ }
     public static class SystemSettings extends SettingsActivity { /* empty */ }

@@ -260,6 +260,8 @@ public class SettingsActivity extends SettingsDrawerActivity
     private static final String ACTION_TIMER_SWITCH = "qualcomm.intent.action.TIMER_SWITCH";
 
     private static final String THEMES_FRAGMENT = "com.android.settings.Themes";
+    
+    private static final String PERFOMANCE_FRAGMENT = "com.android.settings.Perfomance";
 
     private static final String MAGISK_FRAGMENT = "com.android.settings.MagiskManager";
 
@@ -672,7 +674,7 @@ public class SettingsActivity extends SettingsDrawerActivity
 
         mIsShowingDashboard = className.equals(Settings.class.getName())
                 || className.equals(Settings.WirelessSettings.class.getName())
-            	|| className.equals(MainSettingsLayout.class.getName())
+                || className.equals(MainSettingsLayout.class.getName())
                 || className.equals(Settings.DeviceSettings.class.getName())
                 || className.equals(Settings.PersonalSettings.class.getName())
                 || className.equals(Settings.WirelessSettings.class.getName());
@@ -1136,7 +1138,7 @@ public class SettingsActivity extends SettingsDrawerActivity
             finish();
             return null;
         }
-  		 if (KA_FRAGMENT.equals(fragmentName)) {
+         if (KA_FRAGMENT.equals(fragmentName)) {
             Intent kaIntent = new Intent();
             kaIntent.setClassName("com.grarak.kerneladiutor", "com.grarak.kerneladiutor.activities.MainActivity");
             startActivity(kaIntent);
@@ -1146,6 +1148,12 @@ public class SettingsActivity extends SettingsDrawerActivity
             Intent themesIntent = new Intent();
             themesIntent.setClassName("projekt.substratum", "projekt.substratum.LaunchActivity");
             startActivity(themesIntent);
+            finish();
+            return null;
+        } else if (PERFOMANCE_FRAGMENT.equals(fragmentName)) {
+            Intent perfomanceIntent = new Intent();
+            perfomanceIntent.setClassName("org.frap129.spectrum", "org.frap129.spectrum.SplashActivity");
+            startActivity(perfomanceIntent);
             finish();
             return null;
         }
@@ -1261,6 +1269,15 @@ public class SettingsActivity extends SettingsDrawerActivity
         setTileEnabled(new ComponentName(packageName,
                         Settings.ThemesActivity.class.getName()),
                 themesSupported, isAdmin, pm);
+
+        boolean perfomanceSupported = false;
+        try {
+            perfomanceSupported = (getPackageManager().getPackageInfo("org.frap129.spectrum", 0).versionCode > 0);
+        } catch (PackageManager.NameNotFoundException e) {
+        }
+        setTileEnabled(new ComponentName(packageName,
+                        Settings.ThemesActivity.class.getName()),
+                perfomanceSupported, isAdmin, pm);
 
         // Reveal development-only quick settings tiles
         DevelopmentTiles.setTilesEnabled(this, showDev);
