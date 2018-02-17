@@ -261,7 +261,7 @@ public class SettingsActivity extends SettingsDrawerActivity
 
     private static final String THEMES_FRAGMENT = "com.android.settings.Themes";
     
-    private static final String PERFOMANCE_FRAGMENT = "com.android.settings.Perfomance";
+    private static final String SPECTRUM_FRAGMENT = "com.android.settings.Spectrum";
 
     private static final String MAGISK_FRAGMENT = "com.android.settings.MagiskManager";
 
@@ -1150,10 +1150,10 @@ public class SettingsActivity extends SettingsDrawerActivity
             startActivity(themesIntent);
             finish();
             return null;
-        } else if (PERFOMANCE_FRAGMENT.equals(fragmentName)) {
-            Intent perfomanceIntent = new Intent();
-            perfomanceIntent.setClassName("org.frap129.spectrum", "org.frap129.spectrum.SplashActivity");
-            startActivity(perfomanceIntent);
+        } else if (SPECTRUM_FRAGMENT.equals(fragmentName)) {
+            Intent spectrumIntent = new Intent();
+             spectrumIntent.setClassName("org.frap129.spectrum", "org.frap129.spectrum.SplashActivity");
+            startActivity(spectrumIntent);
             finish();
             return null;
         }

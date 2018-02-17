@@ -2312,8 +2312,8 @@
     <string name="themes_summary">Overlay manager service</string>
 
     <!-- Perfomance settings -->
-    <string name="perfomance_title">Perfomance</string>
-    <string name="perfomance_summary">Manage perfomance modes</string>
+    <string name="spectrum_title">Spectrum</string>
+    <string name="spectrum_summary">Manage performance modes</string>
 
     <!-- Slim Recent panel -->
     <string name="slim_recents_title">Slim recents</string>
