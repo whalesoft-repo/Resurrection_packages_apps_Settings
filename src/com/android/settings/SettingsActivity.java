@@ -1270,14 +1270,14 @@ public class SettingsActivity extends SettingsDrawerActivity
                         Settings.ThemesActivity.class.getName()),
                 themesSupported, isAdmin, pm);
 
-        boolean perfomanceSupported = false;
+        boolean spectrumInstalled = false;
         try {
-            perfomanceSupported = (getPackageManager().getPackageInfo("org.frap129.spectrum", 0).versionCode > 0);
+            spectrumInstalled = (getPackageManager().getPackageInfo("org.frap129.spectrum", 0).versionCode > 0);
         } catch (PackageManager.NameNotFoundException e) {
         }
         setTileEnabled(new ComponentName(packageName,
-                        Settings.ThemesActivity.class.getName()),
-                perfomanceSupported, isAdmin, pm);
+                        Settings.SpectrumActivity.class.getName()),
+                spectrumInstalled, isAdmin, pm);
 
         // Reveal development-only quick settings tiles
         DevelopmentTiles.setTilesEnabled(this, showDev);
